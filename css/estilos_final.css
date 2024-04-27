@@ -1,0 +1,860 @@
+* {
+    /*reseteo de valores*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+/*configuracion de variales*/
+:root {
+    --main-color: #fff;
+    --secondary-color: #161511;
+    --third-color: #9f3647;
+
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(23, 23, 23);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #9f3647;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #9f3647
+}
+
+hr {
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+}
+
+/* estilos del body*/
+body {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+
+/*generalidades*/
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+header,
+footer {
+    background-image: linear-gradient(to bottom, #b9345d, #ae3f58, #a34856, #974f54, #8b5555);
+    color: var(--main-color);
+    padding: 20px;
+}
+
+/* estilo  generalidades media query para celular*/
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 2rem;
+
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+/*estilos del header */
+
+.header {
+    height: 15vh;
+    position: sticky;
+    top: 0;
+
+    .navegador {
+
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .anclaLogo {
+        text-decoration: none;
+
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--main-color);
+        font-size: 1.4rem;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        column-gap: 20px;
+
+    }
+
+
+
+}
+
+/*ESTILOS PARA HEADER MOBILE Y TABLET*/
+
+@media (max-width: 768px) {
+    .header {
+        height: initial;
+
+        .navegador {
+            margin-left: 10px;
+            margin-right: 10px;
+            flex-direction: column;
+            row-gap: 20px;
+
+            .anclaLogo {
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+
+
+            padding:initial;
+
+            .listaItem {
+                .linkNav {
+                    font-weight: 400;
+                    margin-right: initial;
+                    font-size: 1rem;
+                    padding: 0.2rem;
+
+                }
+
+            }
+
+        }
+    }
+}
+
+/* seccion titulos hasta boton registrarse */
+main {
+
+
+    .sectionTitulos {
+        height: 85vh;
+        background: linear-gradient(#000000a3, #000000a3, #000000a3, #000000a3), url(../assets/imag/banner-bg.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+    }
+
+    .contenedorTitulos {
+        text-align: center;
+        /*efecto blur a un contenedor */
+        backdrop-filter: blur (8px);
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 50px;
+        border-radius: 5px;
+
+
+    }
+
+    .botonRegistrarse {
+        background-color: #9f3647;
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-decoration: none;
+        /* Agregar efecto de botón presionado */
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            background-color: #9f3647;
+            transform: scale(0.95);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+    }
+
+    hr {
+        border: 1px solid #9f3647;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    /*  seccion que estas buscando*/
+    .buscadorPrincipal {
+        background-color: #181419;
+        color: rgb(255, 255, 255);
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .tituloSection {
+            font-size: 2.5rem;
+            font-weight: 10;
+            margin-bottom: 1rem;
+        }
+
+        .buscadorPeliculas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+
+            .inputBuscador {
+                border: 2px solid white;
+                border-radius: 25px;
+                color: #000000;
+                font-size: 1.2rem;
+                height: 50px;
+                margin: 20px 0px;
+                outline: none;
+                padding: 0px 20px;
+                width: 500px;
+            }
+
+            .botonBuscador {
+                background-color: #9f3647;
+                display: inline-block;
+
+                height: 50px;
+                margin: 20px 10px;
+                padding: 0 20px;
+                border-radius: 25px;
+                font-size: 1.2rem;
+                font-weight: 700;
+                border: 2px solid white;
+                text-align: center;
+                /* Agregar efecto de botón presionado */
+                transition: transform 0.3s, box-shadow 0.3s;
+
+                &:hover {
+                    background-color: #9f3647;
+                    transform: scale(0.95);
+                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+    }
+
+    hr {
+        border: 1px solid #9f3647;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    /* tendencias*/
+
+    .peliculas {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 60px;
+
+        .peliculasTendencia {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 10px;
+
+            .tituloTendencia {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 40px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            .pelicula {
+                width: 200px;
+                height: 300px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                transition: all 0.5s ease;
+
+                .galeriaTendencia {
+
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+
+            hr {
+                border: 1px solid #9f3647;
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 40px;
+            }
+
+        }
+    }
+}
+
+/* ESTILOS MAIN MOBILE*/
+@media (max-width: 768px) {
+    .main {
+        .sectionTitulos {
+            height: 60vh;
+        }
+
+        .buscadorPrincipal {
+            height: 30vh;
+
+            .tituloSection {
+                font-size: 1.6rem;
+            }
+
+            .buscadorPeliculas {
+                .inputBuscador {
+                    font-size: 1rem;
+                    height: 40px;
+                    width: 300px;
+                }
+
+                .botonBuscador {
+                    height: 40px;
+                    padding: 0 15px;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .peliculasTendencia {
+            width: 95%;
+
+            .tituloSection {
+                font-size: 2rem;
+            }
+
+            .peliculas {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    width: 100%;
+
+                    .pelicula {
+                        width: 100%;
+                        height: 500px;
+
+                        .tituloPelicula {
+                            h4 {
+                                font-size: 1rem;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+
+            .botonRegistrarse {
+                padding: 0.8rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        .peliculasAclamadas {
+            .tituloSection {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+/*ESTILOS ESCRITORIO FOOTER*/
+.footer {
+
+    height: 10vh;
+    position: sticky;
+    top: 0;
+
+    .navegador {
+
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        justify-content: space-between;
+
+        ul {
+
+            list-style: none;
+
+            display: flex;
+            column-gap: 20px;
+
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: var(--main-color);
+
+                font-size: 1.4rem;
+            }
+
+        }
+    }
+
+    .flechaArriba {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+    hr {
+        border: 1px solid #9f3647;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+}
+
+
+/*ESTILOS FOOTER CELULAR Y TABLET*/
+@media (max-width: 768px) {
+    .footer {
+        height: initial;
+        padding-top: 15px;
+        padding-bottom: 20px;
+
+        .listaNav {
+            row-gap: 15px;
+
+            .listaItem {
+
+                .linkNav {
+                    font-size: 1rem;
+                }
+
+                .administradorPeliculas {
+                    padding: 0.5rem 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/*ESTILOS ESCRITORIO PARA PAGINA Registrarse */
+.bodyRegistrarse {
+    height: 100vh;
+    background: linear-gradient(to right top, #24242473, #24242473), url("../assets/imag/bg-register.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .headerRegistrarse {
+        color: #ffffff;
+        height: 8vh;
+        padding: 30px;
+
+        .anclaLogo {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.2rem;
+
+            /*animacion hover*/
+            &:hover {
+                animation: tilt-n-move-shaking 0.25s infinite;
+            }
+        }
+    }
+
+    .main {
+
+        /*seccion de registrarse.html*/
+        .seccionRegistrarse {
+            background-color: rgb(42, 42, 42);
+            width: 30%;
+            margin: 0 auto;
+            border-radius: 5px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            font-size: 1.2rem;
+
+            .tituloRegistrarse {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+
+            /*seleccionar todos los input menos el checkbox*/
+            form {
+                width: 100%;
+                padding: 40px;
+
+                input:not(.check, .boton),
+                select {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    height: 40px;
+                    padding: 0px 20px;
+                    font-size: 1.2rem;
+                    border-radius: 20px;
+                    border: 2px solid #9f3647;
+                    background-color: #333333;
+                    outline: none;
+                    color: rgb(255, 255, 255);
+                }
+
+                .error input:not(.check, .boton),
+                .error select {
+                    border: 1px solid #ff0000;
+                }
+
+                .error-text {
+                    color: #ff0000;
+                    font-size: 0.8rem;
+                    margin-top: 0px;
+                    margin-bottom: 10px;
+                }
+
+                .terminos {
+                    font-size: 0.8rem;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+
+                    .textoCheck {
+                        margin-left: 10px;
+                    }
+                }
+
+                .boton {
+                    width: 87%;
+                    box-sizing: content-box;
+                    background-color: #9f3647;
+                    border: 2px solid #9f3647;
+                    color: #ffffff;
+                    padding: 1rem 1rem;
+                    border-radius: 5px;
+                    font-size: 1rem;
+                    font-weight: 500;
+
+                }
+
+                .ayuda {
+                    margin-top: 40px;
+                    font-size: 1rem;
+                    text-decoration: none;
+                    color: #787878;
+                    font-weight: 400;
+                }
+
+            }
+
+        }
+    }
+}
+
+/*ESTILO MOBILE PAGINA REGISTRARSE*/
+@media (max-width: 1200px) {
+    .bodyRegistrarse {
+        .headerRegistrarse {
+            padding: 20px;
+
+            .anclaLogo {
+                font-size: 1rem;
+            }
+        }
+
+        .main {
+            .seccionRegistrarse {
+                width: 95%;
+                padding: 10px 10px;
+
+                .tituloRegistrarse {
+                    font-size: 2rem;
+                }
+
+                form {
+                    width: 100%;
+                    text-align: center;
+
+                    input:not(.check, .boton),
+                    select {
+                        width: 80%;
+                        height: 35px;
+                        font-size: 1rem;
+                    }
+
+                    .terminos {
+                        width: 80%;
+                        margin: 0 auto;
+                        font-size: 0.7rem;
+                    }
+
+                    .boton {
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        width: 70%;
+                        padding: 0.8rem 0.8rem;
+                        font-size: 0.8rem;
+                    }
+
+                    .ayuda {
+                        text-align: left;
+                        font-size: 0.8rem;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .footer {
+        height: initial;
+        padding-top: 15px;
+        padding-bottom: 20px;
+
+        .listaNav {
+            row-gap: 15px;
+
+            .listaItem {
+
+                .linkNav {
+                    font-size: 1rem;
+                }
+
+                .administradorPeliculas {
+                    padding: 0.5rem 0.8rem;
+                }
+            }
+        }
+    }
+
+}
+
+/*ESTILOS ESCRITORIO Detalle */
+.mainDetalle {
+
+    .detalle {
+        padding-top: 50px;
+
+        background: linear-gradient(to right top, #6d6969a7, #6d6969a7), url("../assets/imag/mario-bg.jpg");
+        background-size: cover;
+        background-position: center;
+
+        .contenedorDetalle {
+            width: 75%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 60px;
+
+            img {
+                border-radius: 20px;
+            }
+
+            .textoDetalle {
+                h1 {
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+
+                h2 {
+                    margin-top: 20px;
+                }
+
+                .contenedorCreditos {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+
+
+    }
+
+    .trailer {
+
+        padding-top: 150px;
+        padding-bottom: 100px;
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 70px;
+
+        .contenedorInfo {
+
+
+
+            .redes {
+                margin-bottom: 20px;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    column-gap: 20px;
+
+                    li {
+                        a {
+                            text-decoration: none;
+                            color: #ffffff;
+                            font-size: 2.5rem;
+                            margin-right: 50px;
+                        }
+                    }
+
+                }
+            }
+
+            .info {
+                table {
+                    width: 100%;
+
+                    tr {
+                        td {
+                            font-size: 1.2rem;
+                            padding: 10px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/*ESTILOS MOBILE Y TABLETS DETALLE*/
+@media screen and (max-width:1200px) {
+    .mainDetalle {
+        .detalle {
+            height: initial;
+
+            .contenedorDetalle {
+                flex-direction: column;
+                row-gap: 20px;
+
+                img {
+                    width: 100%;
+                    height: 300px;
+                }
+
+                .textoDetalle {
+                    h1 {
+                        font-size: 1.5rem;
+                    }
+
+                    h2 {
+                        font-size: 1rem;
+                    }
+
+                    .contenedorCreditos {
+                        flex-direction: column;
+                        row-gap: 10px;
+                    }
+                }
+            }
+        }
+
+        .trailer {
+            width: 95%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            flex-direction: column;
+            row-gap: 20px;
+
+            .contenedorTrailer {
+                width: 100%;
+
+                h2 {
+                    margin-bottom: 20px;
+                }
+
+                iframe {
+                    width: 100%;
+                    height: 300px;
+
+                }
+            }
+
+            .contenedorInfo {
+                width: 100%;
+
+                .redes {
+                    width: 100%;
+
+                    ul {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        li {
+                            a {
+                                font-size: 2rem;
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                }
+
+                .info {
+                    table {
+                        tr {
+                            td {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,156 @@
+<!--esto es un comentario-->
+<!DOCTYPE html>
+<!--indica que todo el documento esta en html5-->
+<html lang="es">
+<!--etiqueta de configuraciones del navegador-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--es el titulo de la pagina donde estamos parados-->
+    <title>CACFLIX - Solo peliculas</title>
+    <!--link externo de estylos de css-->
+    <link rel="stylesheet" href="./css/estilos_final.css">
+    <!--iconos fontaweson-->
+    <script src="https://kit.fontawesome.com/4ae73e7070.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display#swap"
+        rel="stylesheet">
+
+    <!--es el icono que representa al sitio web y se ve en la pantalla-->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navegador">
+            <a class="anclaLogo" href="#"><i class="fas fa-film"></i>
+                <alt="logo de CACFLIX" width="100" lazy>
+
+                    <span>CACFLIX SOLO PELICULAS</span>
+            </a>
+            <ul>
+                <li class="listaItem"><a class="linkNav" href="#tendencias">Tendencia</a></li>
+                <li class="listaItem"><a class="linkNav" href="./pages/registrarse.html">Registrarse</a></li>
+                <li class="listaItem"><a class="linkNav iniciarSeion" href="./pages/iniciosesion.html">Iniciar
+                        Sesión</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <main id="main" class="main">
+        <section class="sectionTitulos">
+            <div class="contenedorTitulos">
+                <h1> Películas ilimitadas <br> en un solo lugar</h1>
+                <h2>Disfruta donde quieras.
+                    Cancela en cualquier momento.</h2>
+                <a class="botonRegistrarse" href="./pages/registrarse.html">Registrarse</a>
+            </div>
+
+        </section>
+        <hr>
+        <section class="buscadorPrincipal">
+            <h2 class="tituloSection">¿Qué estas buscando para ver?</h2>
+            <form class="buscadorPeliculas">
+                <input class="inputBuscador" type="text" placeholder="Buscar..." id="buscar" name="buscar">
+                <input class="botonBuscador" type="submit" value="Buscar">
+            </form>
+        </section>
+        <hr>
+
+        <section id="tendencias" class="peliculasTendencia" data-aos="fade-up" data-aos-offset="400"
+            data-aos-delay="100" data-aos-duration="1000">
+
+            <h2 class="tituloSection" style="text-align: center;">Tendencias</h2>
+
+            <div class="peliculas">
+                <div class="pelicula">
+                    <a href="./pages/detalle.html"><img src="./assets/imag/mariopeli.jpg" alt="Mario Broos"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div class="pelicula">
+                    <a href="./pages/detalle.html"><img src="./assets/imag/kunfu panda.jpg" alt="kunfu Panda"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div>
+                    <a href="./pages/detalle.html"><img src="./assets/imag/DuneTwo.jpg" alt="DuneTwo" loading="lazy">
+                    </a>
+                </div>
+                <div>
+                    <a href="./pages/detalle.html"><img src="./assets/imag/RebelMoon.jpg" alt="Rebel Moon"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div>
+                    <a href="./pages/detalle.html"><img src="./assets/imag/godzila2.jpg" alt="Godzilla Versus Koong"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div>
+                    <a href="./pages/detalle.html"><img src="./assets/imag/ElDuro.jpg" alt="El Duro" loading="lazy">
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <div class="contenedorTitulos">
+                <a class="botonRegistrarse" href="">Anterior</a>
+                <a class="botonRegistrarse" href="">Proximo</a>
+            </div>
+            <hr>
+        </section>
+
+
+        <section class="peliculasAclamadas">
+
+            <h2 class="tituloSection" style="text-align: center;">Las mas aclamadas</h2>
+
+            <div class="peliculas">
+                <div class="pelicula">
+                    <a href="./pages/detalle.html"><img src="./assets/imag/batman.jpg" alt="Batman" loading="lazy">
+                    </a>
+                </div>
+                <div class="pelicula">
+                    <a href="./pages/detalle.html"><img src="./assets/imag/MadameWeb.jpg" alt="Women web"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div class="pelicula">
+                    <a href="./pages/detalle.html"><img src="./assets/imag/Patos.jpg" alt="Patos" loading="lazy">
+                    </a>
+                </div>
+                <div class="pelicula">
+                    <a href="./pages/detalle.html"><img class="imgAclamada" src="./assets/imag/planetasimios.jpg"
+                            alt="El Planeta de los Simios" loading="lazy">
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <nav class="navegador">
+            <ul class="listaNav">
+                <li class="listaItem"> <a class="linkNav" href="">Términos y Condiciones</a></li>
+                <li class="listaItem"><a class="linkNav" href="./pages/registrarse.html">Preguntas Frecuentes</a></li>
+                <li class="listaItem"><a class="linkNav" href="./pages/iniciosesion.html">Ayuda</a></li>
+                <li class="listaItem"><a class="linkNav administradorPeliculas" href="">Administrador Peliculas</a></li>
+            </ul>
+
+
+            <a href="#main"><img src="./assets/imag/flecha-hacia-arriba.png" alt="ir arriba flecha" width="50">
+
+            </a>
+
+        </nav>
+
+
+    </footer>
+</body>
+
+</html>
